@@ -1,0 +1,21 @@
+# build outputs
+build/bin/
+frontend/node_modules/
+frontend/dist/
+frontend/wailsjs/
+
+# go
+*.test
+*.out
+
+# os cruft
+.DS_Store
+Thumbs.db
+
+# local tools (if the project is moved around)
+.tools/
+
+# release hygiene: built binaries and the legacy staging tree are artifacts
+*.exe
+.legacy-build/
+dist-out/

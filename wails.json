@@ -1,0 +1,19 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "pluri-deliver",
+  "outputfilename": "Pluri-Deliver",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "José Pilas",
+    "email": "josepilas@users.noreply.github.com"
+  },
+  "info": {
+    "productName": "Pluri-Deliver",
+    "productVersion": "1.7.0",
+    "copyright": "Copyright © 2026 José Pilas",
+    "comments": "Track all your deliveries in one place — Correios/Sedex, J&T, SPX, Amazon, DHL, UPS, Loggi and more. Keyless and free."
+  }
+}

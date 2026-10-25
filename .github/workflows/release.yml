@@ -1,0 +1,98 @@
+name: Release
+
+# Builds all four Windows binaries (modern x64/x86 + legacy x64/x86) whenever
+# a v* tag is pushed, packages them and publishes a GitHub release.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # ---- modern build: Go 1.25 + Wails v2.10 -----------------------------
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Wails CLI
+        run: go install github.com/wailsapp/wails/v2/cmd/wails@v2.10.1
+
+      - name: Frontend deps
+        run: npm --prefix frontend install
+
+      - name: Test
+        run: go test ./...
+
+      - name: Build modern binaries (windows amd64 + 386)
+        run: |
+          CGO_ENABLED=0 wails build -platform windows/amd64 -skipbindings -webview2 embed
+          mv build/bin/Pluri-Deliver.exe build/bin/Pluri-Deliver-x64.exe
+          CGO_ENABLED=0 wails build -platform windows/386 -skipbindings -webview2 embed
+          mv build/bin/Pluri-Deliver.exe build/bin/Pluri-Deliver-x86.exe
+
+      # ---- legacy build: Go 1.20 + Wails v2.8.1 (Windows 7 SP1+) ------------
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.20.14"
+
+      - name: Build legacy binaries (windows 7 sp1, amd64 + 386)
+        run: bash scripts/build-legacy.sh
+
+      - name: Stage artifacts
+        run: |
+          mkdir -p dist-out
+          cp build/bin/Pluri-Deliver-x64.exe dist-out/
+          cp build/bin/Pluri-Deliver-x86.exe dist-out/
+          cp .legacy-build/bin/Pluri-Deliver-Legacy-x64.exe dist-out/ 2>/dev/null || true
+          cp .legacy-build/bin/Pluri-Deliver-Legacy-x86.exe dist-out/ 2>/dev/null || true
+          ls -la dist-out/
+
+      - name: Package
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          cat > dist-out/README-WINDOWS.txt <<'NOTE'
+          Pluri-Deliver — which binary should I run?
+
+            Windows 10 / 11 .............. Pluri-Deliver-x64.exe   (x86.exe on 32-bit)
+            Windows 7 SP1 / 8 / 8.1 ..... Pluri-Deliver-Legacy-x64.exe (or -x86.exe)
+                                          + install WebView2 Runtime 109:
+                                          https://developer.microsoft.com/en-us/microsoft-edge/webview2/
+
+          Data lives in %APPDATA%\Pluri-Deliver\. Source code: see the repository.
+          License: MPL 2.0. Made by José Pilas.
+          NOTE
+          cd dist-out && zip -r "../Pluri-Deliver-${VERSION}-windows-all.zip" . && cd ..
+          sha256sum "Pluri-Deliver-${VERSION}-windows-all.zip" > "Pluri-Deliver-${VERSION}-windows-all.zip.sha256"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            Pluri-Deliver-*-windows-all.zip
+            Pluri-Deliver-*-windows-all.zip.sha256
+            dist-out/Pluri-Deliver-x64.exe
+            dist-out/Pluri-Deliver-x86.exe
+            dist-out/Pluri-Deliver-Legacy-x64.exe
+            dist-out/Pluri-Deliver-Legacy-x86.exe
+          generate_release_notes: true
+          body: |
+            **Pluri-Deliver ${{ github.ref_name }}**
+
+            | Binary | For |
+            |---|---|
+            | `Pluri-Deliver-x64.exe` / `-x86.exe` | Windows 10 / 11 |
+            | `Pluri-Deliver-Legacy-x64.exe` / `-x86.exe` | Windows 7 SP1 / 8 / 8.1 (needs [WebView2 Runtime 109](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)) |
+
+            See `CHANGELOG.md` for what's new.
+            License: MPL 2.0 — Made by José Pilas.

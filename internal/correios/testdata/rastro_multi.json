@@ -1,0 +1,316 @@
+{
+    "transito": [
+        {
+            "data_prevista": "03\/11\/2026",
+            "cod_objeto": "NN 428 571 043 BR",
+            "cod_objeto_": "NN428571043BR",
+            "uf": "PR",
+            "cidade": "Curitiba",
+            "data_evento": {
+                "date": "2026-10-23 07:33:25.000000",
+                "timezone_type": 3,
+                "timezone": "America\/Sao_Paulo"
+            },
+            "codEvento": "RO",
+            "tipoEvento": "01",
+            "descricao": "Objeto em transfer\u00eancia - por favor aguarde",
+            "detalhe": "",
+            "codMcu": "",
+            "botoes": [],
+            "objeto": {
+                "codObjeto": "NN428571043BR",
+                "tipoPostal": {
+                    "sigla": "NN",
+                    "descricao": "ETQ LOG PACKET STANDARD",
+                    "categoria": "PACKET STANDARD IMPORTA\u00c7\u00c3O",
+                    "tipo": "I"
+                },
+                "dtPrevista": "03\/11\/2026",
+                "modalidade": "F",
+                "eventos": [
+                    {
+                        "codigo": "RO",
+                        "tipo": "01",
+                        "dtHrCriado": {
+                            "date": "2026-10-23 07:33:25.000000",
+                            "timezone_type": 3,
+                            "timezone": "America\/Sao_Paulo"
+                        },
+                        "descricao": "Objeto em transfer\u00eancia - por favor aguarde",
+                        "unidade": {
+                            "nome": "",
+                            "codSro": "81010971",
+                            "codMcu": "",
+                            "tipo": "Unidade de Log\u00edstica Integrada",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": "Curitiba",
+                                "uf": "PR",
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "unidadeDestino": {
+                            "nome": "",
+                            "codSro": "",
+                            "codMcu": "",
+                            "tipo": "Unidade de Tratamento",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": "Curitiba",
+                                "uf": "PR",
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "comentario": "",
+                        "icone": "novos\/caminhao-correndo-stroke.svg",
+                        "descricaoFrontEnd": "Objeto expedido",
+                        "finalizador": "N",
+                        "rota": "CONTEXTO",
+                        "descricaoWeb": "TRANSITO",
+                        "detalhe": "",
+                        "dataLimiteRetirada": null,
+                        "token": null,
+                        "tokenBase64": null,
+                        "destinatario": null,
+                        "cached": true
+                    },
+                    {
+                        "codigo": "PAR",
+                        "tipo": "10",
+                        "dtHrCriado": {
+                            "date": "2026-10-23 07:33:24.000000",
+                            "timezone_type": 3,
+                            "timezone": "America\/Sao_Paulo"
+                        },
+                        "descricao": "Sa\u00edda do Centro Internacional",
+                        "unidade": {
+                            "nome": "",
+                            "codSro": "81010971",
+                            "codMcu": "",
+                            "tipo": "Unidade de Log\u00edstica Integrada",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": "Curitiba",
+                                "uf": "PR",
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "unidadeDestino": null,
+                        "comentario": "",
+                        "icone": "novos\/documento-visto-stroke.svg",
+                        "descricaoFrontEnd": "Sa\u00edda do Centro Internacional",
+                        "finalizador": "N",
+                        "rota": "NORMAL",
+                        "descricaoWeb": "PAR10",
+                        "detalhe": "Objeto sem pend\u00eancias de pagamentos e outras obriga\u00e7\u00f5es",
+                        "dataLimiteRetirada": null,
+                        "token": null,
+                        "tokenBase64": null,
+                        "destinatario": null,
+                        "cached": true
+                    },
+                    {
+                        "codigo": "PAR",
+                        "tipo": "16",
+                        "dtHrCriado": {
+                            "date": "2026-10-22 09:55:46.000000",
+                            "timezone_type": 3,
+                            "timezone": "America\/Sao_Paulo"
+                        },
+                        "descricao": "Objeto recebido pelos Correios do Brasil",
+                        "unidade": {
+                            "nome": "",
+                            "codSro": "81010971",
+                            "codMcu": "",
+                            "tipo": "Unidade de Log\u00edstica Integrada",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": "Curitiba",
+                                "uf": "PR",
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "unidadeDestino": null,
+                        "comentario": "",
+                        "icone": "novos\/bandeira-brasil-stroke.svg",
+                        "descricaoFrontEnd": "Conferido - Recebido\/Brasil",
+                        "finalizador": "N",
+                        "rota": "CONTEXTO",
+                        "descricaoWeb": "RecebidoCorreiosBrasil",
+                        "detalhe": "",
+                        "dataLimiteRetirada": null,
+                        "token": null,
+                        "tokenBase64": null,
+                        "destinatario": null,
+                        "cached": true
+                    },
+                    {
+                        "codigo": "PAR",
+                        "tipo": "07",
+                        "dtHrCriado": {
+                            "date": "2026-10-21 20:01:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "America\/Sao_Paulo"
+                        },
+                        "descricao": "An\u00e1lise conclu\u00edda - importa\u00e7\u00e3o autorizada",
+                        "unidade": {
+                            "nome": "",
+                            "codSro": "81010971",
+                            "codMcu": "",
+                            "tipo": "Unidade de Log\u00edstica Integrada",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": "Curitiba",
+                                "uf": "PR",
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "unidadeDestino": null,
+                        "comentario": "",
+                        "icone": "novos\/documento-visto-stroke.svg",
+                        "descricaoFrontEnd": "An\u00e1lise conclu\u00edda - importa\u00e7\u00e3o autorizada",
+                        "finalizador": "N",
+                        "rota": "NORMAL",
+                        "descricaoWeb": "PAR07",
+                        "detalhe": "A autoriza\u00e7\u00e3o poder\u00e1 ser revista pela autoridade aduaneira ou pelos \u00f3rg\u00e3os anuentes. Acompanhe pelo Minhas Importa\u00e7\u00f5es: https:\/\/portalimportador.correios.com.br",
+                        "dataLimiteRetirada": null,
+                        "token": null,
+                        "tokenBase64": null,
+                        "destinatario": null,
+                        "cached": true
+                    },
+                    {
+                        "codigo": "PAR",
+                        "tipo": "21",
+                        "dtHrCriado": {
+                            "date": "2026-10-20 17:21:35.000000",
+                            "timezone_type": 3,
+                            "timezone": "America\/Sao_Paulo"
+                        },
+                        "descricao": "Informa\u00e7\u00f5es enviadas para an\u00e1lise da autoridade aduaneira\/\u00f3rg\u00e3os anuentes",
+                        "unidade": {
+                            "nome": "",
+                            "codSro": "81010971",
+                            "codMcu": "",
+                            "tipo": "Unidade de Log\u00edstica Integrada",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": "Curitiba",
+                                "uf": "PR",
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "unidadeDestino": null,
+                        "comentario": "",
+                        "icone": "novos\/documento-encaminhar-stroke.svg",
+                        "descricaoFrontEnd": "Informa\u00e7\u00f5es eletr\u00f4nicas enviadas para an\u00e1lise da autoridade aduaneira",
+                        "finalizador": "N",
+                        "rota": "NORMAL",
+                        "descricaoWeb": "PAR21",
+                        "detalhe": "Acompanhe pelo Minhas Importa\u00e7\u00f5es https:\/\/portalimportador.correios.com.br",
+                        "dataLimiteRetirada": null,
+                        "token": null,
+                        "tokenBase64": null,
+                        "destinatario": null,
+                        "cached": true
+                    },
+                    {
+                        "codigo": "PO",
+                        "tipo": "01",
+                        "dtHrCriado": {
+                            "date": "2026-10-19 03:41:30.000000",
+                            "timezone_type": 3,
+                            "timezone": "America\/Sao_Paulo"
+                        },
+                        "descricao": "Objeto postado",
+                        "unidade": {
+                            "nome": "CHINA",
+                            "codSro": "00156000",
+                            "codMcu": "",
+                            "tipo": "Pa\u00eds",
+                            "endereco": {
+                                "identificacao": null,
+                                "principal": null,
+                                "numero": null,
+                                "logradouro": null,
+                                "complemento": null,
+                                "bairro": null,
+                                "cidade": null,
+                                "uf": null,
+                                "codigoPostal": null,
+                                "siglaPais": null
+                            }
+                        },
+                        "unidadeDestino": null,
+                        "comentario": "",
+                        "icone": "novos\/postagem-stroke.svg",
+                        "descricaoFrontEnd": "Postado",
+                        "finalizador": "N",
+                        "rota": "NORMAL",
+                        "descricaoWeb": "POSTAGEM",
+                        "detalhe": "",
+                        "dataLimiteRetirada": null,
+                        "token": null,
+                        "tokenBase64": null,
+                        "destinatario": null,
+                        "cached": true
+                    }
+                ],
+                "situacao": "T",
+                "autoDeclaracao": false,
+                "encargoImportacao": false,
+                "percorridaCarteiro": false,
+                "bloqueioObjeto": false,
+                "arEletronico": false,
+                "arImagem": null,
+                "locker": false,
+                "atrasado": false,
+                "urlFaleComOsCorreios": "",
+                "temEventoEntrega": false,
+                "permiteVisualziarArEletronico": false
+            }
+        },
+        {
+            "cod_objeto": "LB 123 456 789 BR",
+            "mensagem": "SRO-020: N\u00e3o localizamos informa\u00e7\u00f5es para o c\u00f3digo informado. Verifique se o c\u00f3digo foi digitado corretamente. Se o objeto foi postado recentemente, as informa\u00e7\u00f5es podem estar em processamento e ficarem dispon\u00edveis em breve. Aguarde alguns minutos e realize nova consulta.",
+            "mensagem_h": "N\u00e3o localizamos informa\u00e7\u00f5es para o c\u00f3digo informado. Verifique se o c\u00f3digo foi digitado corretamente. Se o objeto foi postado recentemente, as informa\u00e7\u00f5es podem estar em processamento e ficarem dispon\u00edveis em breve. Aguarde alguns minutos e realize nova consulta."
+        }
+    ],
+    "entregue": []
+}
